@@ -6,6 +6,11 @@ pipeline{
                 echo 'git checkout'
             }
         }
-               
+      
+      stage('mavenpackage'){
+        steps{
+           echo 'mvn package'
+	   }
+	}   
     }
 }
