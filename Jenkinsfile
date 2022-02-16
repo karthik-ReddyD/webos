@@ -1,5 +1,9 @@
 pipeline{
     agent any
+    tools {
+  jdk 'Myjava'
+  maven 'mymaven'
+    }
     stages{
         stage('git'){
             steps{
@@ -9,7 +13,7 @@ pipeline{
       
       stage('mavenpackage'){
         steps{
-           echo 'mvn package'
+           sh 'mvn clean package'
 	   }
 	}   
     }
