@@ -18,11 +18,11 @@ pipeline{
         steps{
            sh 'mvn clean package'
 	   }
+      }
 	      stage('deploy'){
 		      steps{
 			 sh 'mvn clean deploy'     
 		      }
-	      }
-	}   
+	      }   
     }
 }
