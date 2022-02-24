@@ -4,13 +4,11 @@ pipeline{
   jdk 'Myjava'
   maven 'mymaven'
     }
-	environment {
-  mygiturl = "https://github.com/kliakos/sparkjava-war-example.git"
-}
+	
     stages{
         stage('git'){
             steps{
-                git '$mygiturl'
+                git 'https://github.com/kliakos/sparkjava-war-example.git'
             }
         }
       
